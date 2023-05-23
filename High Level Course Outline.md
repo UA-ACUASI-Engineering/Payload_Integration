@@ -44,11 +44,11 @@ Stak --> Perf
 Perf --> Res
 Res --> Sel
 Sel --> Req
-Sel -.-> EMI
-Sel -.-> Vib
+Sel ==> EMI
+Sel ==> Vib
 Req --> Integ
-Integ -.-> Data
-Integ -.-> Debug
+Integ ==> Data
+Integ ===> Debug
 Integ --> Soft
 Soft --> Oper
 ```

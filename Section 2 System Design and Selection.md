@@ -12,11 +12,14 @@ The final part of this section addresses the physical, electrical, and informati
 
 ## Graph
 ```mermaid
-graph TD
+graph LR
+    Sel(System Selection Process) ==> Req[Physical, Electrical, & Informational Design Requirements]
+    Sel ==> EMI[EMI Interference Considerations]
+    Sel ==> Vib[Vibration Considerations]
+    Sel -.-> FOM[Figure of Merit Chart]
+    Sel -.-> FMEA[Failure Modes Effects Analysis]
+    Sel -.-> Int[Interfaces Table]
 
-Sel[System Selection Process] --> Req[Physical, Electrical, & Informational Design Requirements]
-Sel -.-> EMI[EMI Interference Considerations]
-Sel -.-> Vib[Vibration Considerations]
 ```
 
 ## Figure of Merit Chart
@@ -83,3 +86,33 @@ The Risk Priority Number (RPN) is calculated as the product of Severity, Occurre
 In this table, the failure modes are EMI from USB 3.0 interfering with the GPS receiver and vibration leading to HDD failure. Their effects, causes, and current controls are described, and each is rated on a scale of 1-10 for severity, occurrence, and detection. Based on these ratings, the RPNs are calculated to help prioritize these issues.
 
 This is a simplified version of FMEA, which is typically more detailed and includes additional considerations, such as recommended actions, responsibilities, and deadlines.
+
+## Interfaces Accounting: Physical, Electrical, and Communication
+
+When integrating a payload into a UAV, understanding and accounting for interfaces are key. These interfaces include physical, electrical, and communication ones. This section provides a tabular approach to represent different UAVs and their interface considerations.
+
+### Physical Interfaces
+Physical interfaces refer to the mechanical connection between the UAV and the payload. It encompasses factors such as the payload's mounting location, its impact on the UAV's center of gravity, and the drone's structural integrity. It also includes aspects like size and weight considerations.
+
+### Electrical Interfaces
+Electrical interfaces refer to power requirements and electrical connectivity between the UAV and the payload. This includes the voltage and current requirements of the payload, power supply capabilities of the UAV, wiring, connectors, and possible interference with other systems.
+
+### Communication Interfaces
+Communication interfaces are about data connectivity between the UAV and the payload. They include elements like data transmission standards, wired or wireless communication, data rate, data protocols, and possibly data encryption.
+
+Here is an example of an interface accounting table that takes these factors into account for different types of UAVs:
+
+| UAV Type | Physical Interface | Electrical Interface | Communication Interface |
+|----------|--------------------|----------------------|-------------------------|
+| UAV A    | Removable payload bay, 3kg max weight, 150 x 100 x 80 mm max size | 5V DC, 2A max current, USB Type-C connector | Wi-Fi, 2.4GHz, MAVLink protocol |
+| UAV B    | Fixed external mount, 10kg max weight, unrestricted size | 12V DC, 5A max current, XT60 connector | Wired Ethernet, Gigabit, custom protocol |
+| UAV C    | Internal compartment, 1kg max weight, 50 x 50 x 50 mm max size | 3.3V DC, 500mA max current, Micro USB connector | Bluetooth, Low Energy, proprietary protocol |
+| ...      | ...                | ...                  | ...                     |
+
+Each row in the table represents a different type of UAV. The columns describe the physical, electrical, and communication interfaces for each UAV, providing specific details on the requirements and constraints of each interface. 
+
+It's crucial to note that the specifics of these interfaces can vary greatly between different UAV models, and even between different versions of the same model. Always consult the specific documentation and specifications provided by the UAV manufacturer when planning for payload integration. 
+
+In the case where a payload does not match the UAV's existing interfaces, additional components or adaptations may be necessary to facilitate integration. For instance, you might need an electrical converter to match power requirements or a physical adapter to secure the payload to the UAV. 
+
+Also, bear in mind that changes to these interfaces can affect other aspects of the UAV's performance, such as flight time, stability, and control. Hence, all these considerations need to be taken into account when integrating a payload into a UAV.

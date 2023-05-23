@@ -11,9 +11,11 @@ The final part of this section, prior art and commercial options research, invol
 ## Graph
 ```mermaid
 graph TD
-
-Stak[Stakeholder Identification] --> Perf[Target Performance Metrics]
-Perf[Target Performance Metrics] --> Res[Prior Art & Commercial Options Research]
+    Stak(Stakeholder Identification) -.-> StakeTab[Stakeholder Table]
+    Stak --> Perf(Target Performance Metrics)
+    Perf -.-> HouseDia[House of Quality Diagram]
+    Perf --> Res(Commercial Options Research)
+    Res -.-> PriorArt[Prior Art Document]
 ```
 
 ## Stakeholder Table

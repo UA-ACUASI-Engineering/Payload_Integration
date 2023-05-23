@@ -15,12 +15,16 @@ The final topic is system operations, which covers the steps for operating, main
 
 ## Graph
 ```mermaid
-graph TD
+graph LR
 
-Integ[Integration] --> Soft[Software Processing Pipeline Design]
-Integ -.-> Data[Data Products Considerations]
-Integ -.-> Debug[Debugging Interfaces Considerations]
+Integ(Integration) --> Soft[Software Processing Pipeline Design]
+Integ ==> Data[Data Products Considerations]
+Integ ==> Debug[Debugging Interfaces Considerations]
+Integ -.-> IntPay[Integrated Payload]
 Soft[Software Processing Pipeline Design] --> Oper[System Operations]
+Soft -.-> ProPipe[Processing Pipeline]
+Oper -.-> OperDoc[System Operations Manual]
+
 ```
 
 ## Integration of the Camera Payload
