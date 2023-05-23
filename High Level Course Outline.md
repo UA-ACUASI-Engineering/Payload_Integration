@@ -5,7 +5,7 @@
 [[Section 1 Initial Assessment and Research]]
 - Stakeholder Identification: Discuss the process of identifying relevant stakeholders who will be involved in the integration process or will be affected by it.
 - Target Performance Metrics: Explain how to find and establish key performance metrics for the drone payload system.
-- Prior Art and Commercial Options Research: Describe the process of researching existing technologies, patents, and commercial options that might inform the integration process.
+- Market Research: Describe the process of researching existing technologies, patents, and commercial options that might inform the integration process.
 
 ### Section 2: System Design and Selection
 [[Section 2 System Design and Selection]]

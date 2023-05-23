@@ -15,7 +15,7 @@ graph TD
     Stak --> Perf(Target Performance Metrics)
     Perf -.-> HouseDia[House of Quality Diagram]
     Perf --> Res(Commercial Options Research)
-    Res -.-> PriorArt[Prior Art Document]
+    Res -.-> PriorArt[Market Research Document]
 ```
 
 ## Stakeholder Table
@@ -65,9 +65,9 @@ In this simplified table, the 'Customer Requirements' column represents the desi
 
 In a complete HoQ diagram, each customer requirement would be related to every technical requirement, allowing the project team to see the interconnectedness of different aspects of the project. The diagram would also include a section for benchmarking against competitors and prioritizing requirements based on customer importance and technical difficulty. However, this simplified version gives you a basic understanding of the concept.
 
-## Prior Art Document
+## Market Research Document
 
-A Prior Art Document, often referred to as a patent or non-patent literature (NPL), is an integral component of any research or development project. This document represents publicly disclosed information about an invention, technology, method, or process before a specific date. It serves multiple purposes:
+A Market Research Document, often referred to as a patent or non-patent literature (NPL), is an integral component of any research or development project. This document represents publicly disclosed information about an invention, technology, method, or process before a specific date. It serves multiple purposes:
 
 1. **Evidence of Existing Technology**: Prior art serves as proof that a particular invention or concept is already known publicly. This evidence can be in various forms, such as patents, patent applications, academic papers, articles, presentations, public demonstrations, or any other public documentation.
 
@@ -79,4 +79,4 @@ A Prior Art Document, often referred to as a patent or non-patent literature (NP
 
 5. **Cost and Time Efficiency**: If an off-the-shelf solution meets the project requirements, it can save significant time and resources that would have been spent developing a new solution. This efficiency extends to reducing the risk of technical challenges and delays associated with new product development.
 
-Thus, a Prior Art Document serves as an essential tool in the planning and execution of a project. It assists in understanding the current state of technology, respecting intellectual property rights, and informing strategic decisions for the project's success.
+Thus, a Market Research Document serves as an essential tool in the planning and execution of a project. It assists in understanding the current state of technology, respecting intellectual property rights, and informing strategic decisions for the project's success.

@@ -19,6 +19,7 @@ graph LR
     Sel -.-> FOM[Figure of Merit Chart]
     Sel -.-> FMEA[Failure Modes Effects Analysis]
     Sel -.-> Int[Interfaces Table]
+    Sel -.-> BOM[Bill of Materials]
 
 ```
 
@@ -44,6 +45,7 @@ Here's how you might use a Figure of Merit chart in this context:
 By quantifying the performance of each option against each criterion, a Figure of Merit chart provides a clear, objective basis for decision-making. It enables the project team to consider multiple factors simultaneously and to balance trade-offs between them. This can be particularly valuable in complex projects like UAV payload integration, where decisions can have multiple technical, logistical, and financial implications.
 
 ### Example
+
 | Camera Payload Options | Image Quality (3) | Power Consumption (2) | Weight (2) | Cost (1) | Figure of Merit |
 |------------------------|-------------------|-----------------------|------------|-----------|-----------------|
 | Camera A               | 8                 | 7                     | 9          | 6         | 62              |
@@ -75,6 +77,7 @@ Each identified failure mode is assigned a score for Severity, Occurrence, and D
 In essence, FMEA is used to prioritize failures according to their effect on the customer, and identify and eliminate obvious failure modes. It helps engineers and designers to design out failures, and design in reliability and safety. The aim is to reduce the risk of failures and create the most reliable, safe, and customer-satisfying product or process.
 
 ### Example
+
 | Failure Mode | Effects | Severity (1-10) | Causes | Occurrence (1-10) | Current Controls | Detection (1-10) | Risk Priority Number (RPN) |
 |--------------|---------|-----------------|--------|-------------------|------------------|------------------|---------------------------|
 | EMI from USB 3.0 interference with GPS receiver | GPS signal loss, inaccurate positioning | 9 | USB 3.0 cable routing close to GPS receiver | 5 | Shielding on USB and GPS cables, EMI filters on power lines | 4 | 180 |
@@ -116,3 +119,38 @@ It's crucial to note that the specifics of these interfaces can vary greatly bet
 In the case where a payload does not match the UAV's existing interfaces, additional components or adaptations may be necessary to facilitate integration. For instance, you might need an electrical converter to match power requirements or a physical adapter to secure the payload to the UAV. 
 
 Also, bear in mind that changes to these interfaces can affect other aspects of the UAV's performance, such as flight time, stability, and control. Hence, all these considerations need to be taken into account when integrating a payload into a UAV.
+
+## Bill of Materials (BOM)
+
+A Bill of Materials (BOM) is a comprehensive list of parts, items, assemblies, and other materials required to create a product, as well as instructions required for gathering and using the required materials. The BOM is one of the essential building blocks of product development, providing essential information for manufacturing, procurement, and assembly.
+
+In the context of UAV payload integration, the BOM could include the UAV, the payload, connectors, cables, mounting hardware, any necessary additional components such as power converters or data transceivers, and potentially even tools required for assembly and testing. Here's an outline of what a BOM might include:
+
+1. **UAV**: This is the drone itself, without any additional components or payloads. It should be listed with its specific model number and manufacturer.
+
+2. **Payload**: This is the main component or system that the UAV is being designed to carry. Like the UAV, it should be listed with its specific model number and manufacturer.
+
+3. **Additional components**: Any other components necessary for the payload integration. These might include electrical converters, physical adapters, data transceivers, or additional sensors. Each should be listed with its specific model number, manufacturer, and any relevant specifications.
+
+4. **Hardware**: This includes connectors, cables, screws, and any other hardware necessary for the assembly and secure mounting of the payload and any additional components.
+
+5. **Tools**: If specific tools are necessary for the assembly or testing of the integrated system, these should also be listed in the BOM. 
+
+6. **Software**: In some cases, software necessary for the operation, data processing, or communication between the payload and UAV might also be included in the BOM.
+
+The BOM is not only a list of components but also serves as a basis for cost estimation, supply chain planning, and logistical considerations. It also provides essential information for maintaining and troubleshooting the system.
+
+### Example
+
+| Item | Description | Quantity | Manufacturer | Part Number | Unit Cost | Total Cost |
+|------|-------------|----------|--------------|-------------|-----------|------------|
+| 1 | UAV | 1 | UAV Manufacturer | UAV-123 | $2000 | $2000 |
+| 2 | Payload | 1 | Payload Manufacturer | PAY-456 | $1000 | $1000 |
+| 3 | Power Converter | 1 | Converter Manufacturer | CON-789 | $50 | $50 |
+| 4 | Mounting Bracket | 1 | Bracket Manufacturer | BRK-012 | $30 | $30 |
+| 5 | USB Cable | 1 | Cable Manufacturer | CAB-345 | $10 | $10 |
+| 6 | Assembly Toolkit | 1 | Toolkit Manufacturer | TK-678 | $100 | $100 |
+| ... | ... | ... | ... | ... | ... | ... |
+| **Total** | | | | | | **$3190** |
+
+Remember that the specifics of the BOM will vary greatly depending on the specific UAV, payload, and integration requirements. Always consult the specific documentation and specifications provided by the manufacturers when creating a BOM.
